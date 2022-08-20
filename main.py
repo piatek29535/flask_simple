@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from datetime import datetime
-from markupsafe import escape
+
+home_title = "Home Page"
 
 posts = [
     {
@@ -28,7 +29,7 @@ app = Flask(__name__)
 @app.route("/home")
 @app.route("/")
 def fun():
-    return render_template("home.html", posts=posts)
+    return render_template("home.html", posts=posts, title=home_title)
 
 @app.route("/about")
 def about():

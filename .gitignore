@@ -106,6 +106,8 @@ celerybeat.pid
 .venv
 env/
 venv/
+# missspelled and now i have to add it xd
+venve/ 
 ENV/
 env.bak/
 venv.bak/
