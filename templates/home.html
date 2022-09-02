@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    {% if title %}
-        <title>Home Page - {{ title }}</title>
-    {% else %}
-        <title>Home title</title>
-    {% endif %}
-    
-</head>
-<body>
+{% extends "layout.html" %}
+{% block content %}
 
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.desc }}</h2>
+        <q>{{ post.tag }}</q>
+    {% endfor %}
 
-
-</body>
-</html>
+{% endblock content %}
